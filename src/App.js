@@ -1,5 +1,6 @@
 import React from "react"
 import boxes from "./Boxes"
+import Box from "./Box.js"
 import "./styles.css"
 
 function App(props){
@@ -12,11 +13,10 @@ const styles={
 }
 
 const showBoxes = boxArray.map(box =>
-        <div key={box.id} 
-        className="boxes"
-        style= {styles}
-        >
-        </div>
+        <Box 
+            key={boxArray.id}
+            on={boxArray.on}
+        />
         )
         
     return (
