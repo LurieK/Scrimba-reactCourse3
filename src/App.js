@@ -5,10 +5,16 @@ import "./styles.css"
 function App(){
 const [boxArray, setboxArray]= React.useState(boxes)
 console.log(boxArray)
-    
+
+const styles = {
+    backgroundColor: "black"
+}
+
 const showBoxes = boxArray.map(box =>
         <div key={box.id} 
-        className="boxes">
+        className="boxes"
+        style= {styles}
+        >
         </div>
         )
         
@@ -20,6 +26,12 @@ const showBoxes = boxArray.map(box =>
     )
 }
 export default App
+
+
+
+
+
+
 
 //contact Card Challenge
 // export default function App() {
