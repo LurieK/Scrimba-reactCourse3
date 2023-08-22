@@ -1,5 +1,6 @@
 import React from "react"
 import boxes from "./Boxes"
+import "./styles.css"
 
 function App(){
 const [boxArray, setboxArray]= React.useState(boxes)
