@@ -1,5 +1,15 @@
 
+* {
+    box-sizing: border-box;
+}
 
+.boxes {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    border: 30px;
+    border: solid;
+}
 /* Card Challenge */
 /* * {
     box-sizing: border-box;

@@ -1,4 +1,5 @@
 import React from "react"
+import boxes from "./Boxes"
 
 function App(){
 const [boxArray, setboxArray]= React.useState(boxes)
@@ -16,7 +17,7 @@ const showBoxes = boxArray.map(box =>
             {showBoxes}
         </main>
     )
-    }
+}
 export default App
 
 //contact Card Challenge
