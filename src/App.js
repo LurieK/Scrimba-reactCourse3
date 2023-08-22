@@ -8,7 +8,7 @@ console.log(boxArray)
 console.log(props.darkMode)
 
 const styles={
-    backgroundColor: props.darkMode ? '#222222' : '#cccccc'
+     backgroundColor: props.darkMode ? '#222222' : '#cccccc'
 }
 
 const showBoxes = boxArray.map(box =>
