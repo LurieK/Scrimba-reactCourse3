@@ -3,19 +3,17 @@ import boxes from "./Boxes"
 import Box from "./Box.js"
 import "./styles.css"
 
-function App(props){
+function App(){
 const [boxArray, setboxArray]= React.useState(boxes)
-console.log(boxArray)
-console.log(props.darkMode)
 
-const styles={
-     backgroundColor: props.darkMode ? '#222222' : '#cccccc'
-}
+console.log(boxArray.key)
+console.log(boxArray.on)
+
 
 const showBoxes = boxArray.map(box =>
         <Box 
-            key={boxArray.id}
-            on={boxArray.on}
+            key={box.id}
+            on={box.on}
         />
         )
         
