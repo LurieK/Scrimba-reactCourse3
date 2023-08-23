@@ -13,6 +13,7 @@ function Box(props){
 
     return (
         <div 
+            onClick={props.handleClick}
             // onClick={changeColor}
             className="boxes"
             style={styles}
