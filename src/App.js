@@ -6,7 +6,7 @@ import "./styles.css"
 function App(){
 const [boxArray, setboxArray]= React.useState(boxes)
 
-function toggle(){
+function toggle(id){
     console.log(id)
 }
 
