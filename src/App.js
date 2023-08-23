@@ -1,17 +1,16 @@
 import React from "react"
-import boxes from "./Boxes"
+import boxes from "./boxData.js"
 import Box from "./Box.js"
 import "./styles.css"
 
 function App(){
 const [boxArray, setboxArray]= React.useState(boxes)
 
-console.log(boxArray.key)
-console.log(boxArray.on)
 
 
 const showBoxes = boxArray.map(box =>
         <Box 
+            
             key={box.id}
             on={box.on}
         />

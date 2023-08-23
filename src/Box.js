@@ -1,11 +1,20 @@
+import React from 'react';
 
 function Box(props){
-    console.log(props)
+    const [color, setColor] = React.useState(props.on)
+    
     const styles={
-        backgroundColor: props.on ? '#222222' : 'none'
+        backgroundColor: color ? '#222222' : 'transparent'
    }
+
+   function changeColor(){
+        setColor(!color)
+   }
+
     return (
-        <div className="boxes"
+        <div 
+            onClick={changeColor}
+            className="boxes"
             style={styles}
         ></div>
     )
