@@ -6,15 +6,19 @@ import "./styles.css"
 function App(){
 const [boxArray, setboxArray]= React.useState(boxes)
 
-
+function toggle(){
+    console.log('clicked')
+}
 
 const showBoxes = boxArray.map(box =>
         <Box 
-            
+            handleClick={toggle}
             key={box.id}
             on={box.on}
         />
         )
+
+
         
     return (
         <main>
