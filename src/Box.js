@@ -8,7 +8,7 @@ function Box(props){
    }
 
    function changeColor(){
-        setColor(!color)
+        setColor(prevColor => !prevColor)
    }
 
     return (
