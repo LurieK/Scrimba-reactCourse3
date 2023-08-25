@@ -8,20 +8,9 @@ const [boxArray, setBoxArray]= React.useState(boxes)
 
 function toggle(id){
    setBoxArray(prevBoxArray =>{
-        const newBoxArray=[];
-
-        for( let i=0; i< prevBoxArray.length; i++){
-            if (prevBoxArray[i].id === id){
-                newBoxArray.push({
-                    ...prevBoxArray[i],
-                    on: !prevBoxArray[i].on
-                })
-            }else{
-                newBoxArray.push(prevBoxArray[i])
-            }
-        }
-
-        return newBoxArray
+    return prevBoxArray.map((square)=>{
+        return square.id === id ? {...square, on: !square.on } : square
+    })
    })
 
 
