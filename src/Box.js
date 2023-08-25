@@ -2,7 +2,7 @@ import React from 'react';
 
 function Box(props){
     // const [color, setColor] = React.useState(props.on)
-    console.log(props.id)
+    
     const styles={
         backgroundColor: props.on ? '#222222' : 'transparent'
    }

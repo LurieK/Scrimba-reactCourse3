@@ -4,25 +4,25 @@ import Box from "./Box.js"
 import "./styles.css"
 
 function App(){
-const [boxArray, setboxArray]= React.useState(boxes)
-console.log(boxArray)
+const [boxArray, setBoxArray]= React.useState(boxes)
+
 function toggle(id){
-    setboxArray(prevBoxArray => {
-        const newBoxes=[]
-        
-        for(let i=0; i<prevBoxArray.length; i++){
+   setBoxArray(prevBoxArray =>{
+        const newBoxArray=[];
+
+        for( let i=0; i< prevBoxArray.length; i++){
             if (prevBoxArray[i].id === id){
-                newBoxes.push(
-                    prevBoxArray[i],
-                    !prevBoxArray[i].on
-                )
+                newBoxArray.push({
+                    ...prevBoxArray[i],
+                    on: !prevBoxArray[i].on
+                })
             }else{
-                newBoxes.push(prevBoxArray[i])
+                newBoxArray.push(prevBoxArray[i])
             }
         }
-        return newBoxes
-    })
-    console.log(id)
+
+        return newBoxArray
+   })
 
 
 }
