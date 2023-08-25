@@ -5,7 +5,7 @@ import "./styles.css"
 
 function App(){
 const [boxArray, setboxArray]= React.useState(boxes)
-
+console.log(boxArray)
 function toggle(id){
     setboxArray(prevBoxArray => {
         const newBoxes=[]
@@ -13,15 +13,16 @@ function toggle(id){
         for(let i=0; i<prevBoxArray.length; i++){
             if (prevBoxArray[i].id === id){
                 newBoxes.push(
-                    ...prevBoxArray[i],
+                    prevBoxArray[i],
                     !prevBoxArray[i].on
                 )
             }else{
-                newBoxes.push(...prevBoxArray[i])
+                newBoxes.push(prevBoxArray[i])
             }
         }
-        return newSquares
+        return newBoxes
     })
+    console.log(id)
 
 
 }
