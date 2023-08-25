@@ -13,7 +13,7 @@ function Box(props){
 
     return (
         <div 
-            onClick={()=>props.handleClick(props.id)}
+            onClick={(e)=>props.handleClick(props.id)}
             // onClick={changeColor}
             className="boxes"
             style={styles}

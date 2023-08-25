@@ -7,14 +7,30 @@ function App(){
 const [boxArray, setboxArray]= React.useState(boxes)
 
 function toggle(id){
-    console.log(id)
+    setboxArray(prevBoxArray => {
+        const newBoxes=[]
+        
+        for(let i=0; i<prevBoxArray.length; i++){
+            if (prevBoxArray[i].id === id){
+                newBoxes.push(
+                    ...prevBoxArray[i],
+                    !prevBoxArray[i].on
+                )
+            }else{
+                newBoxes.push(...prevBoxArray[i])
+            }
+        }
+        return newSquares
+    })
+
+
 }
 
 const showBoxes = boxArray.map(box =>
         <Box 
             handleClick={toggle}
+            id= {box.id}
             key={box.id}
-            id={box.id}
             on={box.on}
         />
         )
