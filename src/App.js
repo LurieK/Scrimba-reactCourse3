@@ -1,21 +1,31 @@
 import React from "react"
-import boxes from "./Boxes"
+import boxes from "./boxData.js"
 import Box from "./Box.js"
 import "./styles.css"
 
 function App(){
-const [boxArray, setboxArray]= React.useState(boxes)
+const [boxArray, setBoxArray]= React.useState(boxes)
 
-console.log(boxArray.key)
-console.log(boxArray.on)
+function toggle(id){
+   setBoxArray(prevBoxArray =>{
+    return prevBoxArray.map((square)=>{
+        return square.id === id ? {...square, on: !square.on } : square
+    })
+   })
 
+
+}
 
 const showBoxes = boxArray.map(box =>
         <Box 
+            handleClick={toggle}
+            id= {box.id}
             key={box.id}
             on={box.on}
         />
         )
+
+
         
     return (
         <main>
